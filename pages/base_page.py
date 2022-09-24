@@ -9,7 +9,6 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
-    #как искать (css, id, xpath и тд) и собственно что искать (строку-селектор).
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
