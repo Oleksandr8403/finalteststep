@@ -7,3 +7,10 @@ class PageProduct(BasePage):
 
     def should_be_price_correct(self):
         assert self.browser.find_element(*ProductPageLocators.ALERT_PRICE_BOOK).text == self.browser.find_element(*ProductPageLocators.PRICE_BOOK).text, "Price not correct"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"
+
+    def should_success_message_is_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "Success message is not disappeared, but shuold be"
+

@@ -1,6 +1,7 @@
 import pytest
 from .pages.main_page import MainPage
 from .pages.product_page import PageProduct
+#import time
 
 @pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer1",
@@ -21,3 +22,8 @@ def test_guest_can_add_product_to_basket(browser, link):
     after_click_basket_page = PageProduct(browser, browser.current_url)
     after_click_basket_page.should_be_message_add_to_basket()
     after_click_basket_page.should_be_price_correct()
+#    after_click_basket_page.should_not_be_success_message()
+#    after_click_basket_page.should_success_message_is_disappeared()
+#    time.sleep(10)
+
+

@@ -13,3 +13,4 @@ class ProductPageLocators():
     ALERT_BOOK = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div > strong")
     PRICE_BOOK = (By.CSS_SELECTOR, "div.col-sm-6.product_main > p.price_color")
     ALERT_PRICE_BOOK = (By.CSS_SELECTOR, "div.alert.alert-safe.alert-noicon.alert-info.fade.in > div > p:nth-child(1) > strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages > div:nth-child(2) > div > strong")
