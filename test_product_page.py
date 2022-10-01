@@ -26,4 +26,14 @@ def test_guest_can_add_product_to_basket(browser, link):
 #    after_click_basket_page.should_success_message_is_disappeared()
 #    time.sleep(10)
 
+def test_guest_should_see_login_link_on_product_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
+    page = PageProduct(browser, link)
+    page.open()
+    page.should_be_login_link()
 
+def test_guest_can_go_to_login_page_from_product_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
+    page = PageProduct(browser, link)
+    page.open()
+    page.go_to_login_page()
