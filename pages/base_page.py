@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import math
 from .locators import BasePageLocators
-from .locators import MainPageLocators
 from .locators import BasketPageLocators
 
 class BasePage():
@@ -28,12 +27,11 @@ class BasePage():
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
-    # need change should_be basket link on should_be_basket_button
-    def should_be_basket_link(self):
-        assert self.is_element_present(*MainPageLocators.BASKET_LINK), "Basket button is not presented"
+    def should_be_basket_button(self):
+        assert self.is_element_present(*BasePageLocators.BASKET_BUTTON), "Basket button is not presented"
 
     def click_add_to_basket(self):
-        basket_link = self.browser.find_element(*MainPageLocators.BASKET_LINK)
+        basket_link = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
         basket_link.click()
 
     def is_element_present(self, how, what):
