@@ -22,8 +22,8 @@ class TestUserAddToBasketFromProductPage:
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
         page = MainPage(browser, link)
         page.open()
-        without_clock_basket = PageProduct(browser, browser.current_url)
-        without_clock_basket.should_not_be_success_message()
+        without_click_basket = PageProduct(browser, browser.current_url)
+        without_click_basket.should_not_be_success_message()
 
     def test_user_can_add_product_to_basket(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
@@ -91,8 +91,8 @@ def test_guest_cant_see_success_message(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
     page = MainPage(browser, link)
     page.open()
-    without_clock_basket = PageProduct(browser, browser.current_url)
-    without_clock_basket.should_not_be_success_message()
+    without_click_basket = PageProduct(browser, browser.current_url)
+    without_click_basket.should_not_be_success_message()
 
 @pytest.mark.xfail(reason="we know that this test is fail")
 def test_message_disappeared_after_adding_product_to_basket(browser):
