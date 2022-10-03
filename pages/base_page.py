@@ -11,7 +11,7 @@ from .locators import BasketPageLocators
 # This is the base class of our project, which is inherited by other classes.
 # all basic methods are described here
 class BasePage:
-    def __init__(self, browser, url, timeout=0):
+    def __init__(self, browser, url, timeout=4):
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
