@@ -1,6 +1,8 @@
 from .base_page import BasePage
 from .locators import LoginPageLocators
 
+
+# This class describes the login page
 class LoginPage(BasePage):
     def __init__(self, browser, url):
         super().__init__(browser, url)
